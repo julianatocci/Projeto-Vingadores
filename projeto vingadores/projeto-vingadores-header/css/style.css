@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0; /*Margem interno*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    padding: 8px 24px;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 24px;
+}
+
+header img {
+    width: 180px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li + li{  /*Esse li + li significa que só coloca 24px nesse li se tiver um li antes dele*/
+    margin-left: 24px;
+}
+
+header a{
+    color: #ebebeb;
+    text-decoration: none;
+    transition: color 0.2s; /* isso é para deixar a transição de mudança de cor (hover) um pouco mais lenta*/
+}
+
+header a:hover {  /*esse hover é para mudar a cor do link quando passar o cursor do mouse por cima*/
+    color: #f13239;
+}
+
+.hero {
+    background-image: url(../../imagens/banner.jpg); /*para colocar uma imagem de fundo*/
+    background-size: cover; /*fixa o lado esquerdo e superior da imagem e ao mudar o tamanho da tela do site, a imagem vai sendo cortada pelo lado direito*/
+    background-position: center 25% /*top*/; /*Significa que eu quero que fixe a imagem no centro, corte dos lados e com o "top" eu quero que fixe no topo e corte pela base da imagem*/
+    height: 300px;
+    display: flex; /*O elemento flex faz com que um elemento fique do lado do outro*/
+    
+    flex-direction: column; /*Quando colocamos essa funçao, as funçoes de justify-content e align-items se invertem, quem alinhava elemntos no eixo vertical passa a alinhar no eixo horizontal e vice versa*/
+
+    justify-content: flex-end; /*Alinhar elementos no eixo horizontal*/
+    align-items:center ; /*Alinhar elementos no eixo vertical*/
+    padding: 24px;
+}
+
+.hero h1 {
+    color: #ebebeb;
+    font-size: 36px;
+}
+
+.dots {
+    display: flex;
+}
+
+.dots span {
+    display: inline-block;
+    background-color: #ebebeb;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots span + span {
+    margin-left: 16px;
+}
+
+.dots .active {
+    background-color: #f13239;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: 64px auto 0;
+    padding: 0 24px;
+}
+
+.gallery h2 {
+    color: #111111;
+    margin-bottom: 32px;
+    border-left: 4px solid #f13239;
+    padding-left: 8px;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.gallery-row div {
+    /* flex-grow / flex-shrink / flex-basis */
+    flex: 1 1 250px;
+}
+
+.gallery-row img {
+    width: 100%;
+    border-radius: 10px; /* usado para deixar a borda arredondada */
+    margin-bottom: 16px;
+}
+
+.gallery p {
+    font-weight: bold;
+}
+
+.history {
+    margin: 64px auto 0;
+    padding: 92px 24px 0;
+    background-color: #111111;
+    color: #ebebeb; 
+    border-top: 4px solid #f13239;
+}
+
+.history .container {
+    max-width: 1200px;
+    margin: 0 auto;  /*isso significa que em cima e embaixo a margem é 64px e nos lados é automático, o que faz o texto ir para o meio */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0px 24px;
+    border-bottom: 2px solid #f13239;
+}
+
+.history .container .col {
+    flex: 1 1 350px;
+}
+
+.history .container .col img {
+    width: 100%;
+    display: block;
+}
+
+.history h2 {
+    color:#ebebeb;
+    margin-bottom: 32px;
+    border-left: 4px solid #f13239;
+    padding-left: 8px;
+}
+
+.history p {
+    line-height: 1.5;
+}
+
+.history p + p {
+    color: #f13239;
+    margin-top: 24px;
+
+}
+
+.history a {
+    color: #f13239;
+    transition: color 0.3s;
+}
+
+.history a:hover {
+    color: #ebebeb;
+}
+
+footer {
+    padding: 64px 24px;
+    background-color: #111111;
+    color: #ebebeb;
+    text-align: center;
+}
+
+footer a {
+    color: #f13239;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ebebeb;
+}
